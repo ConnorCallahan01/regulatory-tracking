@@ -2,7 +2,7 @@
   "version": "1.0",
   "projectId": "42d5b441-d416-4b40-9cef-d1f746528fc4",
   "createdAt": "2026-02-07T00:18:34.177Z",
-  "updatedAt": "2026-02-07T00:21:39.039Z",
+  "updatedAt": "2026-02-07T00:26:25.779Z",
   "files": [
     {
       "id": "fccefa8c-c62b-43fc-a5e8-7001ad4fbfe7",
@@ -15,8 +15,20 @@
       "createdAt": "2026-02-07T00:21:38.635Z",
       "updatedAt": "2026-02-07T00:21:38.635Z",
       "tags": []
+    },
+    {
+      "id": "82e99d59-92fa-400b-89d7-5b4c63a2a79e",
+      "name": "Regulatory Tracker - User Journey and Decision Points_2026-02-06_162624.md",
+      "path": "repository/workflow-analysis/Regulatory Tracker - User Journey and Decision Points_2026-02-06_162624.md",
+      "folder": "workflow-analysis",
+      "mimeType": "application/octet-stream",
+      "size": 8684,
+      "sha": "3ef23fc5a7307ba2bc1835176255ab7247a2d586",
+      "createdAt": "2026-02-07T00:26:25.580Z",
+      "updatedAt": "2026-02-07T00:26:25.580Z",
+      "tags": []
     }
   ],
   "externalLinks": [],
-  "storageUsed": 8684
+  "storageUsed": 17368
 }
