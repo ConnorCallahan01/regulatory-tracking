@@ -1,29 +1,30 @@
 # Regulatory Tracker - User Journey and Decision Points
 
-**Source**: repository/workflow-analysis/Regulatory Tracker - User Journey and Decision Points_2026-02-06_165138.md
+**Source**: repository/workflow-analysis/Regulatory Tracker - User Journey and Decision Points_2026-02-06_174141.md
 **Type**: Design Document
 **Upload Date**: 2026-02-07
 **Source SHA**: Not provided
 
 ## Key Points
 
-- Regulatory Tracker is an AI-powered application that monitors regulatory changes using Claude AI as a backend agent to automate detection, analysis, and workflow management
-- System follows a 7-phase user journey from initial dashboard access through scan configuration, execution, results review, workflow management, and knowledge store management
-- Backend orchestration uses a multi-stage pipeline (Initializing → Retrieving Sources → Detecting Changes → Analyzing → Scoring → Generating Artifacts → Finalizing) with specialized agent components
-- Claude AI analyzes regulatory documents for relevance, impact level (Low/Medium/High/Critical), affected compliance areas, and generates confidence scores; items below 0.7 confidence are flagged for human review
-- System generates professional artifacts including markdown summaries and Word documents for verified regulatory changes, stored in a searchable knowledge store with export functionality
-- Nine critical decision points throughout the workflow balance automated detection with human oversight, from parameter validation through knowledge store verification
+- Regulatory Tracker is an AI-powered application that continuously monitors regulatory changes using Claude AI backend with mock agentic orchestration
+- System follows a 7-phase user journey from initial dashboard access through scan configuration, execution, results review, workflow management, and knowledge store integration
+- Backend scan pipeline includes 7 automated stages: initializing, retrieving sources, detecting changes, analyzing with Claude AI, scoring confidence levels, generating artifacts, and finalizing
+- Key decision points occur at user, system, and AI levels—including parameter validation, material change detection, impact analysis by Claude, and human review flagging for low-confidence items
+- Results flow through workflow states (Draft → In Review → Verified) with user-controlled transitions and comments before being archived in the searchable knowledge store
+- Four backend agent components orchestrate the process: ScanOrchestrator, ChangeDetectionService, LLMService, and ArtifactGenerator
 
 ## Entities and Topics
 
-- **ScanOrchestrator**: Backend component that coordinates multi-stage scan pipeline and manages state transitions
-- **ChangeDetectionService**: Detects material changes using content hashing and regulatory keyword matching
-- **LLMService**: Integrates with Claude API (claude-sonnet-4) for regulatory document analysis and structured JSON response parsing
-- **ArtifactGenerator**: Creates markdown summaries and Word documents for compliance reporting
-- **FinCEN CDD Amendment**: High-impact mock regulatory source reducing beneficial ownership threshold from 25% to 10%
-- **Regulatory domains**: AML (Anti-Money Laundering), KYC, Transaction Monitoring, SAR Filing
-- **Workflow statuses**: Draft, In Review, Verified (with knowledge store integration)
+- **Regulatory Tracker**: AI-powered application for monitoring and analyzing regulatory changes across domains and jurisdictions
+- **ScanOrchestrator**: Backend component coordinating multi-stage scan pipeline with state transitions and error handling
+- **Claude AI (claude-sonnet-4)**: LLM used for analyzing regulatory content relevance, impact level determination, and generating recommendations
+- **ChangeDetectionService**: Service that detects material changes through keyword analysis and SHA-256 content hashing
+- **ArtifactGenerator**: Component creating markdown summaries and Word documents for compliance documentation
+- **Mock Data Sources**: FinCEN amendments, SAR advisories, OCC guidance, and Federal Reserve AML procedures used for demonstration
+- **Workflow Management**: Status-based tracking system (Draft, In Review, Verified) with user-controlled transitions
+- **Knowledge Store**: Searchable archive of verified regulatory items with filtering and export capabilities
 
 ## Relevance to Project
 
-This document provides comprehensive technical specification of the Regulatory Tracker application's user journey and backend orchestration architecture. It maps the complete workflow from scan initiation through AI-powered analysis to human review and knowledge store management, establishing the design foundation for implementing an automated regulatory compliance monitoring system.
+This document provides a comprehensive technical specification of the Regulatory Tracker application's complete user journey and backend agent architecture. It serves as essential design documentation for understanding system workflows, decision points, data flow, and component interactions—critical for development, testing, and future enhancements of the regulatory monitoring system.
